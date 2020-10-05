@@ -1,4 +1,67 @@
-	body, h1, h2, h3, p, img, ul, li{
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+      display: flex;
+  flex-wrap: wrap;
+flex-direction: column;
+width: 50%;
+height: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+      display: flex;
+  flex-wrap: wrap;
+flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-right {
+  flex-wrap: wrap;
+flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .clear {
+      display: flex;
+  flex-wrap: wrap;
+flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .sidebar-left {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+   .img {
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: flex;
+  flex-flow: row nowrap;
+justify-content: center;
+
+}
+  }
+
+
+
+
+
+
+
+
+body, h1, h2, h3, p, img, ul, li{
 		border:0; margin:0; padding:0;
 	}
 		/*the above is a very basic reset rule.  Every browser has a slightly different default for HTML tags.  By using this simple CSS reset, all the more glaring styles 
@@ -20,6 +83,7 @@
 		background-image:url(headerbkgd.png); /* sets a background image in the header and the position it should sit */
 		background-repeat:no-repeat; /* sets a background image to repeat, repeat-x, repeat-y or not at all as written in this rule */
 		background-position:left bottom;/* sets a background image position */
+		background-size: auto;
 		color:#fff;	/* sets the the color of all header text to white */
 		-webkit-border-bottom-right-radius: 4px;
 		-webkit-border-bottom-left-radius: 4px;
@@ -96,14 +160,15 @@
 		text-transform:uppercase;	/* this makes all anchor classes with .list uppercase  */
 		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
 	}
-				
+			
 	div#footer{
 		background-color:#c4d5d9;
 		margin:0 auto;
 		padding:15px;
 		text-align:center;
-		width:900px;
+		width: 900px;
 	}
+}
 	.float-left{
 		float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
 		margin:0  10px 10px 0;
@@ -117,3 +182,9 @@
 	.clear{
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}	
+
+@media screen and (max-width: 640px) {		
+	div#footer{
+	width: auto;
+}
+}
