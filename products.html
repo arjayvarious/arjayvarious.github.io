@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!--
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><h1>ABC Toys</h1></a> <!-- for the logo or name of the company -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navcollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><h3>Home</h3> <span class="sr-only">(current)</span></a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="#"><h3>Products</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h3>Contact Us</h3></a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="#"><h3>Location</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h3>Extra</h3></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><h3>Search</h3></button>
+    </form>
+  </div>
+</nav>
+</div>
+
+<div class="container">
+  <h2>Products</h2>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Magic Cube</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+  <div class="row">
+  <div class="column">
+    <img src="toy1-1.jpg" alt="magic1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy1-2.jpg" alt="magic2" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy1-3.jpg" alt="magic3" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy1-4.jpg" alt="magic4" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy1-5.jpg" alt="magic5" style="width:100%">
+  </div>
+</div>
+<p style="font-size:15px">This product make your baby interactive with the icon and it perfect for the babies up to 7 years old, creating eight musical sound with only the touch of the button.</p>
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Whack A Frog Game</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+  <div class="row">
+  <div class="column">
+    <img src="images/toy2-1.jpg" alt="frog1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy2-2.jpg" alt="frog2" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy2-3.jpg" alt="frog3" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy2-4.jpg" alt="frog4" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy2-5.jpg" alt="frog5" style="width:100%">
+  </div>
+</div>
+<p style="font-size:15px">This toys provide fun and entertainment, this development fine motor skill and fun for all ages. This is good quality and perfect for gifts.</p>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Pull and Sing Puppy</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">  <div class="row">
+  <div class="column">
+    <img src="images/toy3-1.jpg" alt="puppy1" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy3-2.jpg" alt="puppy2" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/toy3-3.jpg" alt="puppy3" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy3-4.jpg" alt="puppy4" style="width:100%">
+  </div>
+<div class="column">
+    <img src="images/toy3-5.jpg" alt="puppy5" style="width:100%">
+  </div>
+</div>
+<p style="font-size:15px">Pull and Sing puppy make you have a lot of fun and 3 colorful buttons to introduce numbers, colors and part of the body, and have 60+ playful songs just pull the cord.</p>
+      </div>
+    </div>
+  </div> 
+</div>
+
+</body>
+</html>
