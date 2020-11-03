@@ -56,46 +56,33 @@
   </div>
 </nav>
 
-
-<h1>Click the button to get your coordinates.</h1>
-
-<button onclick="getLocation()"><h4>Try It</h4></button>
-
-<p style="font-size:15px" id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-
-function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable."
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred."
-      break;
-  }
-}
-</script>
+     <script>
+     function getloc() {
+	 
+	navigator.geolocation.getCurrentPosition(get_coords,if_error);
+	 
+	function get_coords(position)
+	{
+	latitude=position.coords.latitude;
+	longitude=position.coords.longitude;
+	 
+	alert('Latitude is '+latitude+' and longitude is '+longitude);
+	}
+	 
+	function if_error(err)
+	{
+	if(err.code==1){alert('User Denied');}
+	if(err.code==2){alert('Position unavailable');}
+	if(err.code==3){alert('Timeout');}
+	}
+	} 
+	</script>
+</head>
+<body>
+<h1>Geolocation</h1>
+<form action="#" method="get">
+  <input type="submit" value="Get Location" onClick="getloc();">
+</form>
 
 
 
