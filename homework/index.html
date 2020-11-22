@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Simple use of Service Worker">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>Using Service Worker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script>
+$(document).ready(function()
+{
+    var body = $(document.body);
+    $('#backgrounds').bind('change', function(event){
+        var bg = $(this).val();
+        if(bg == null || typeof bg === 'undefined' || $.trim(bg) === '')
+            body.css('background', 'none transparent');
+        else
+            body.css('background', bg);
+    });
+});
+</script>
+
+<link rel="manifest" href="js13kpwa.webmanifest">
+  </head>
+
+  <body>
+
+    <br>
+    <h1>Progressive Web Application</h1>
+<br><br><br>
+    <p>is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is intended to work on any platform that uses a standards-compliant browser, including both desktop and mobile devices. </p>
+
+<p>While web applications have been available for mobile devices from the start, they have generally been slower, have had fewer features, and have been less used than native apps. PWA features allow to close the gap to native applications and create similar user experiences. Features include</p>
+<ul>
+<li>Work offline</li>
+<li>High performance</li>
+<li>Background processing in service workers in a separate thread</li>
+<li>Access to the phone's sensors</li>
+<li>Support for push notifications</li>
+<li>An icon on the phone‘s home screen</li>
+</ul>
+<p>Since a progressive web app is a type of webpage or website known as a web application, they do not require separate bundling or distribution. In particular, there is no requirement for developers or users to install the web apps via digital distribution systems like Apple App Store or Google Play. However, for many PWA providers the lack of visibility of the PWA in those distribution systems is a disadvantage compared to native apps. To varying degrees, the major app stores started to embrace PWAs, allowing them to be found in app stores. </p>
+<br><br>
+
+<p class="monospace">Select your Background</p>
+    <select id="backgrounds">
+    <option>Select a background</option>
+    <option value="url('images/lightblue.jpg')">Background Image 1</option>
+    <option value="url('images/lightgold.jpg')">Background Image 2</option>
+    </select>
+    
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+
+        document.querySelector('#show').addEventListener('click', () => {
+          const iconUrl = document.querySelector('select').selectedOptions[0].value;
+          let imgElement = document.createElement('img');
+          imgElement.src = iconUrl;
+          document.querySelector('#container').appendChild(imgElement);
+        });
+      </script>
+
+  </body>
+</html>

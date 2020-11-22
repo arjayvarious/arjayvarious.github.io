@@ -1,0 +1,9 @@
+body { font-size: 1.2em; font-family: Arial, Verdana, serif; background-color: none; }
+h1 { color: red; text-align:center; font-style: italic; }
+#container { text-align:center; width: 50%; margin: 0 auto; }
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+  color: blue;
+  font-size: 14px;
+}
