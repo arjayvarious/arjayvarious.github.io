@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="3 Technologies">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>React Native</title>
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="https://arjayvarious.github.io/flutter.html">Flutter</a></li>
+  <li><a href="https://arjayvarious.github.io/ionic.html">Ionic</a></li>
+  <li><a href="https://arjayvarious.github.io/react.html">React Native</a></li>
+</ul>
+    
+<img src="images/react.jpg" alt="flutter" class="size">
+<div class="note">
+<p>What is React Native?</p>
+<p>is an open-source mobile application framework that uses JavaScript.</p>
+<p>What is React Native for?</p>
+<p>React Native is an effective framework for: <br>
+
+⚫Cross-platform development<br>
+⚫Building mobile apps using JavaScript language<br>
+⚫Developing applications for both Android and iOS using a single codebase<br>
+⚫Using the same design as React</p>
+
+<p> Please note:<br><br>
+⚫Apps created using React Native are not mobile web apps. React Native uses the same fundamental UI building blocks as regular iOS and Android apps: this means that instead of building in Java, Kotlin, or Swift – you’re putting the same building blocks together, using JavaScript and React.<BR>
+⚫React Native uses components that are analogous to widgets in Flutter.</p>
+   
+</div>
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+
+        document.querySelector('#show').addEventListener('click', () => {
+          const iconUrl = document.querySelector('select').selectedOptions[0].value;
+          let imgElement = document.createElement('img');
+          imgElement.src = iconUrl;
+          document.querySelector('#container').appendChild(imgElement);
+        });
+
+
+ </script>
+  </body>
+</html>
