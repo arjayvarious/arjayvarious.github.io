@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="3 Technologies">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>Ionic</title>
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+  <body>
+<ul>
+  <li><a class="active" href="https://arjayvarious.github.io/index.html">Home</a></li>
+  <li><a href="https://arjayvarious.github.io/flutter.html">Flutter</a></li>
+  <li><a href="https://arjayvarious.github.io/ionic.html">Ionic</a></li>
+  <li><a href="https://arjayvarious.github.io/react.html">React Native</a></li>
+</ul>
+    
+<img src="images/ionic.png" alt="flutter" class="size">
+<div class="note">
+<p>What is Ionic?</p>
+<p>A Cross-platform app is an app that can be used on multiple platforms using a single code base.</p>
+<p> ⚫Programming language: <br><br>
+React Native uses React library and JavaScript to deliver a native experience on iOS and Android. While Ionic makes the best use of web technologies like HTML, CSS, and JavaScript and requires a Cordova plugin to wrap the applications in native containers.<br><br>
+
+Flutter is a bit different here as it uses Dart language which is developed by Google. Dart is a modern, multi-paradigm, and objected-oriented programming language used for building apps for web, mobile, and desktop apps.
+
+</p>
+
+<p> ⚫Community: <br><br>
+React Native and Ionic are having strong community support compared to Flutter. Flutter is relatively new in the battle of mobile app development tools, making it less mature than Ionic and React Native. As Ionic is built on AngularJS, almost 6 years ago, resulting in very strong community support in provisions of the quick solution of errors and constant updates.<br><br>
+
+However, Flutter has made its space and attracted developers to learn Dart which, in turn, help developers to build high-performing native apps with the support from Google community. <br><br>
+
+All of these frameworks seem to be having a bright future as all three are backed by strongest tech communities from Google and Facebook.
+
+</p>
+<p> ⚫Performance: <br><br>
+Ionic is different than other frameworks as it uses web technologies like HTML, CSS, and JavaScript to create hybrid cross-platform apps. It needs plugins and third-party packages to wrap your application in native cover.<br><br>
+React Native and Ionic both deliver superior performance but Flutter goes a step ahead because there is no native transition or some bridges to connect with the native environment.<br><br>
+If we talk about user interface design or front-end environment of these frameworks, they offer high-quality, native-like experiences which are loved by the developer’s community.
+
+</p>
+   
+</div>
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+
+        document.querySelector('#show').addEventListener('click', () => {
+          const iconUrl = document.querySelector('select').selectedOptions[0].value;
+          let imgElement = document.createElement('img');
+          imgElement.src = iconUrl;
+          document.querySelector('#container').appendChild(imgElement);
+        });
+
+
+ </script>
+  </body>
+</html>
